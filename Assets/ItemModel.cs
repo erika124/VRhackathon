@@ -6,10 +6,9 @@ using UniRx;
 
 public class ItemModel : MonoBehaviour
 {
+	public Button button;
 	[SerializeField]
-	private Button button;
-	[SerializeField]
-	private Text name;
+	public Text name;
 	[SerializeField]
 	private Text description;
 	[SerializeField]
@@ -20,5 +19,10 @@ public class ItemModel : MonoBehaviour
 		Item item = GetComponent<Item>();
 		name.text = item.name;
 		description.text = item.description;
+	}
+
+	public string GetName()
+	{
+		return GetComponent<Item>().name;
 	}
 }
