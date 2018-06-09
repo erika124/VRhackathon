@@ -17,7 +17,7 @@ public class UIManager : MonoBehaviour
 		{
 			button.GetComponent<ItemModel>().button.OnClickAsObservable().Subscribe(_ =>
 			{
-				GameObject obj = Resources.Load("Prefabs" + button.GetComponent<ItemModel>().name) as GameObject;
+				GameObject obj = Resources.Load("Prefabs" + button.gameObject.name) as GameObject;
 			});
 		}
 	}
