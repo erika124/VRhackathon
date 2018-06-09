@@ -36,7 +36,7 @@ public class PlayerMove: MonoBehaviour {
 	            z -= 2.0f;
 	        }
 
-	        m_Rigidbody.velocity = z * transform.forward + x * transform.right;
+	        m_Rigidbody.velocity = z * new Vector3(0, 0, -1) + x * transform.right;
 
 
 

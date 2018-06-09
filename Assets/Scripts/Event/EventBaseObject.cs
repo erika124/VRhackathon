@@ -11,4 +11,8 @@ public class EventBaseObject : MonoBehaviour
 	{
 		DoEvent(other.gameObject);
 	}
+	public void OnTriggerEnter(Collider other)
+	{
+		DoEvent(other.gameObject);
+	}
 }
