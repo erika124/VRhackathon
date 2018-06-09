@@ -10,7 +10,7 @@ public class CharacterView : MonoBehaviour {
 	public Canvas canvas;
 	public Button clearSeaButton;
 	public Button clearMountainButtton;
-	void ChangeViewText(string str)
+	public void ChangeViewText(string str)
 	{
 		CharacterText.text = str;
 	}
