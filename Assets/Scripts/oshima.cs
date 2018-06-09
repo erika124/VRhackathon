@@ -29,5 +29,11 @@ public class oshima : MonoBehaviour {
 		else if(Input.GetKeyDown(KeyCode.C)){
 			GameObject c = Instantiate(coin,new Vector3(-2,10,0),_rotation);
 			}
+		else if(Input.GetKeyDown(KeyCode.K)){
+			GameObject k = Instantiate(cola,new Vector3(-2,10,0),_rotation);
+			}
+		else if(Input.GetKeyDown(KeyCode.M)){
+			GameObject m = Instantiate(mentos,new Vector3(-2,10,0),_rotation);
+			}
 	}
 }
