@@ -5,4 +5,12 @@ using UnityEngine;
 public class CharacterManager : MonoBehaviour {
 	[SerializeField]
 	PlayerManager playerManager;
+
+	[SerializeField]
+	CharacterView characterView;
+
+	void Start()
+	{
+		//playerManager
+ 	}
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UniRx;
 public class PlayerManager : MonoBehaviour {
-	ReactiveProperty<GameObject> HasGameObject;
+	public ReactiveProperty<GameObject> HasGameObject;
 
 	public void GenerateObject(GameObject Obj)
 	{
