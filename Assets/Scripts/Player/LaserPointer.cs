@@ -25,7 +25,7 @@ public class LaserPointer : MonoBehaviour {
 	private LineRenderer _LaserPointerRenderer; // LineRenderer
 
 	// コントローラー
-	private Transform Pointer {
+	public Transform Pointer {
 		get {
 			// 現在アクティブなコントローラーを取得
 			var controller = OVRInput.GetActiveController();
@@ -52,7 +52,7 @@ public class LaserPointer : MonoBehaviour {
 	void Update () {
 
 		if (OVRInput.GetDown(OVRInput.Button.Two)){
-			if(true)
+			if(fadeIn)
 			{
 				canvasGroup.DOFade(1,1);
 				fadeIn = false;
@@ -87,7 +87,6 @@ public class LaserPointer : MonoBehaviour {
 				}
 				else
 				{
-					CharacterCanvasGroup.DOFade(1,1);
 					hitInfo.transform.position = pointer.position + pointer.forward;
 					target_obj = hitInfo.collider.gameObject;
 					if(hold_flag) hold_flag = false;

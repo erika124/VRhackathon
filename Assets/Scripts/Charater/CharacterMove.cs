@@ -14,7 +14,7 @@ public class CharacterMove : MonoBehaviour {
 
     void Update () {
 		destination = target.position + transform.forward / 1000;
-		if(Vector3.Distance(transform.position, destination) < 0.2f)
+		if(Vector3.Distance(transform.position, destination) < 0.5f)
 		{
 			transform.rotation = Quaternion.Slerp (transform.rotation, Quaternion.LookRotation (target.position - transform.position), 0.3f);
 		}
