@@ -13,6 +13,7 @@ public float p_speed = 1000;
 public float interval = 0.01f;
 public int p_num = 20;
 private Renderer _renderer;
+Quaternion _rotation;
 
 public ReactiveProperty<string> eventHappen = new ReactiveProperty<string>();
 
@@ -23,6 +24,7 @@ void Start()
 		_renderer = magma.GetComponent<Renderer>();
 		_renderer.material.color = magmaColor;
 		nowmagmaColor = magmaColor;
+		_rotation.eulerAngles =new Vector3(0, 0, 0);
 	}
 
 //火山イベント
@@ -31,8 +33,9 @@ public void Popcorn(){
 }
 
 private IEnumerator PopcornGenerate(){
+	Debug.Log("a");
 	for(int i = 0; i<p_num; i++){
-		GameObject p_obj = Instantiate(popcorn);
+		GameObject p_obj = Instantiate(popcorn,this.gameObject.transform.position,_rotation);
 		float random_x = Random.Range(0.5f,-0.5f);
 		float random_z = Random.Range(0.5f,-0.5f);
 		Vector3 fource = new Vector3(random_x,1,random_z) * p_speed; 
@@ -43,6 +46,7 @@ private IEnumerator PopcornGenerate(){
 	}
 public void Coin(int pattern){
 		if(pattern == 0){
+			Debug.Log("aaa");
 			base.ColorChange(greenColor, nowmagmaColor, 5f, _renderer);
 			nowmagmaColor = greenColor;
 		}else{
