@@ -20,12 +20,12 @@ public class PlayerMove: MonoBehaviour {
 	        if (touchPadPt.x > 0.5 && -0.5 < touchPadPt.y && touchPadPt.y < 0.5) //右方向
 	        {
 	            transform.Rotate(new Vector3(0.0f, 0.5f, 0.0f)); // 十字キーで首を左右に回す
-	            x += 0.2f;
+	            x += 0.4f;
 	        }
 	        if (touchPadPt.x < -0.5 && -0.5 < touchPadPt.y && touchPadPt.y < 0.5) //左方向
 	        {
 	            transform.Rotate(new Vector3(0.0f, -0.5f, 0.0f));         // 十字キーで首を左右に回す
-	            x -= 0.2f;
+	            x -= 0.4f;
 	        }
 	        if (touchPadPt.y > 0.2 && -0.5 < touchPadPt.x && touchPadPt.x < 0.5) //上方向
 	        {
@@ -35,10 +35,9 @@ public class PlayerMove: MonoBehaviour {
 	        {
 	            z -= 2.0f;
 	        }
-
-	        m_Rigidbody.velocity = z * new Vector3(0, 0, -1) + x * transform.right;
-
-
-
+			
+			Vector3 pos_forwared = transform.forward;
+			pos_forwared.y = 0.0f;
+	        m_Rigidbody.velocity = z * pos_forwared + x * new Vector3(1, 0, 0);
 	    }
 }

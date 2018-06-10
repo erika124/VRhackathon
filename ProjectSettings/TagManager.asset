@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Cola
+  - Coin
+  - Fryingpan
+  - Corn
+  - Mentos
+  - Clean
+  - Character
   layers:
   - Default
   - TransparentFX

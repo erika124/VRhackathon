@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UniRx;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class UIManager : MonoBehaviour
 {
@@ -17,7 +18,8 @@ public class UIManager : MonoBehaviour
 		{
 			button.GetComponent<ItemModel>().button.OnClickAsObservable().Subscribe(_ =>
 			{
-				GameObject obj = Resources.Load("Prefabs" + button.gameObject.name) as GameObject;
+				GameObject obj = Resources.Load("Prefabs/" + button.gameObject.name) as GameObject;
+				this.GetComponent<CanvasGroup>().DOFade(0,1);
 			});
 		}
 	}

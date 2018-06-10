@@ -1,16 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using DG.Tweening;
 
 public class CharacterView : MonoBehaviour {
+	[SerializeField]
+	private Text CharacterText;
 
-	// Use this for initialization
-	void Start () {
-		
+	public GameObject canvas;
+	public CanvasGroup MessagePanel;
+	public CanvasGroup DeletePanel;
+	public Button clearSeaButton;
+	public Button clearMountainButtton;
+	public void ChangeViewText(string str)
+	{
+		CharacterText.text = str;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
 }

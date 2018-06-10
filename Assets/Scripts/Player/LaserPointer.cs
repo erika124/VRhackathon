@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 /**
 * レーザーポインターを出すクラス
@@ -42,11 +43,26 @@ public class LaserPointer : MonoBehaviour {
 	bool hold_flag = false;
 	private GameObject target_obj;
 	string hold_obj_tag;
+	public CharacterManager characterManager;
+	public CanvasGroup canvasGroup;
+	public CanvasGroup CharacterCanvasGroup;
+	bool fadeIn = true;
 	// private Vector3 dt = new Vector3(0, 0, 0);
 
 	void Update () {
 
-
+		if (OVRInput.GetDown(OVRInput.Button.Two)){
+			if(true)
+			{
+				canvasGroup.DOFade(1,1);
+				fadeIn = false;
+			}
+			else
+			{
+				canvasGroup.DOFade(0,1);
+				fadeIn = true;
+			}
+		}
 
 		var pointer = Pointer; // コントローラーを取得
 		// コントローラーがない or LineRendererがなければ何もしない
@@ -65,15 +81,22 @@ public class LaserPointer : MonoBehaviour {
 			// Rayがヒットしたらそこまで
 			_LaserPointerRenderer.SetPosition(1, hitInfo.point);
 			if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger)){
-				// 	dt =  (hitInfo.transform.position - (pointer.position + pointer.forward) )/ 20.0f;
-				// 	for(var i=0; i < 20; i++){
-				// 		target_obj.transform.position +=  dt;
-				// 	}
-				hitInfo.transform.position = pointer.position + pointer.forward;
-				target_obj = hitInfo.collider.gameObject;
-				// hold_obj_tag = hitInfo.collider.tag;
-				if(hold_flag) hold_flag = false;
-				else hold_flag = true;
+				if(hitInfo.collider.tag == "Character")
+				{
+					CharacterCanvasGroup.DOFade(1,1);
+				}
+				else if(hitInfo.collider.tag == "items")
+				{
+					CharacterCanvasGroup.DOFade(1,1);
+					hitInfo.transform.position = pointer.position + pointer.forward;
+					target_obj = hitInfo.collider.gameObject;
+					if(hold_flag) hold_flag = false;
+					else hold_flag = true;
+				}
+				else
+				{
+					//地面
+				}
 			}
 		} else {
 			// Rayがヒットしなかったら向いている方向にMaxDistance伸ばす
