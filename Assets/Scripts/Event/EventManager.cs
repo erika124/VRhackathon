@@ -10,7 +10,7 @@ public Color magmaColor;
 public Color greenColor;
 private Color nowmagmaColor; 
 public float p_speed = 1000;
-public float interval = 0.01f;
+public float interval = 0.1f;
 public int p_num = 20;
 private Renderer _renderer;
 Quaternion _rotation;
