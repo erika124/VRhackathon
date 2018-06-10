@@ -20,7 +20,7 @@ public class UIManager : MonoBehaviour
 			{
 				GameObject obj = Resources.Load("Prefabs/" + button.gameObject.name) as GameObject;
 				playerManager.GenerateObject(obj);
-				this.GetComponent<CanvasGroup>().DOFade(0,1);
+				this.GetComponent<CanvasGroup>().DOFade(0, 1);
 			});
 		}
 	}

@@ -23,12 +23,12 @@ public class PlayerMove: MonoBehaviour {
 				if (touchPadPt.x > 0.5 && -0.5 < touchPadPt.y && touchPadPt.y < 0.5) //右方向
 				{
 					transform.Rotate(new Vector3(0.0f, 0.5f, 0.0f)); // 十字キーで首を左右に回す
-					x += 0.4f;
+					x += 0.5f;
 				}
 				if (touchPadPt.x < -0.5 && -0.5 < touchPadPt.y && touchPadPt.y < 0.5) //左方向
 				{
 					transform.Rotate(new Vector3(0.0f, -0.5f, 0.0f));         // 十字キーで首を左右に回す
-					x -= 0.4f;
+					x -= 0.5f;
 				}
 				if (touchPadPt.y > 0.2 && -0.5 < touchPadPt.x && touchPadPt.x < 0.5) //上方向
 				{

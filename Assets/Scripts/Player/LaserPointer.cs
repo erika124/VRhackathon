@@ -40,8 +40,8 @@ public class LaserPointer : MonoBehaviour {
 	}
 
 	public GameObject player;
-	bool hold_flag = false;
-	private GameObject target_obj;
+	public bool hold_flag = false;
+	public GameObject target_obj;
 	string hold_obj_tag;
 	public CharacterManager characterManager;
 	public CanvasGroup canvasGroup;
@@ -87,10 +87,13 @@ public class LaserPointer : MonoBehaviour {
 				}
 				else
 				{
-					hitInfo.transform.position = pointer.position + pointer.forward;
-					target_obj = hitInfo.collider.gameObject;
-					if(hold_flag) hold_flag = false;
-					else hold_flag = true;
+					if(hitInfo.collider.tag != "Untagged")
+					{
+						hitInfo.transform.position = pointer.position + pointer.forward;
+						target_obj = hitInfo.collider.gameObject;
+						if(hold_flag) hold_flag = false;
+						else hold_flag = true;
+					}
 				}
 			}
 		} else {

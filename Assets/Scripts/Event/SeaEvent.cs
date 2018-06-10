@@ -14,7 +14,7 @@ public class SeaEvent : EventBaseObject
 	private Color nowseaColor; 
 	private Status status;
 	private Renderer _renderer;
-	private EventManager eventmanager;
+	public EventManager eventmanager;
 
 	//sound類
 	private AudioSource sound;
