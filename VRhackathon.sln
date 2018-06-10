@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VRhackathon", "Assembly-CSharp-firstpass.csproj", "{95648A69-25C8-7CF1-4777-9AAD7842D4F9}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VRhackathon", "Assembly-CSharp.csproj", "{34367868-ECEC-5523-2867-C5C92165C794}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VRhackathon", "Assembly-CSharp-Editor.csproj", "{B8FA34FC-738F-578D-C108-69EF6EEBD166}"
@@ -11,6 +13,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{95648A69-25C8-7CF1-4777-9AAD7842D4F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95648A69-25C8-7CF1-4777-9AAD7842D4F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95648A69-25C8-7CF1-4777-9AAD7842D4F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95648A69-25C8-7CF1-4777-9AAD7842D4F9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{34367868-ECEC-5523-2867-C5C92165C794}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{34367868-ECEC-5523-2867-C5C92165C794}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34367868-ECEC-5523-2867-C5C92165C794}.Release|Any CPU.ActiveCfg = Release|Any CPU
