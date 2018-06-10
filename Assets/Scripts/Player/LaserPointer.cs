@@ -85,17 +85,13 @@ public class LaserPointer : MonoBehaviour {
 				{
 					CharacterCanvasGroup.DOFade(1,1);
 				}
-				else if(hitInfo.collider.tag == "items")
+				else
 				{
 					CharacterCanvasGroup.DOFade(1,1);
 					hitInfo.transform.position = pointer.position + pointer.forward;
 					target_obj = hitInfo.collider.gameObject;
 					if(hold_flag) hold_flag = false;
 					else hold_flag = true;
-				}
-				else
-				{
-					//地面
 				}
 			}
 		} else {
