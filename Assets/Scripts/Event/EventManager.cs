@@ -33,7 +33,6 @@ public void Popcorn(){
 }
 
 private IEnumerator PopcornGenerate(){
-	Debug.Log("a");
 	for(int i = 0; i<p_num; i++){
 		GameObject p_obj = Instantiate(popcorn,this.gameObject.transform.position,_rotation);
 		float random_x = Random.Range(0.5f,-0.5f);
@@ -46,7 +45,6 @@ private IEnumerator PopcornGenerate(){
 	}
 public void Coin(int pattern){
 		if(pattern == 0){
-			Debug.Log("aaa");
 			base.ColorChange(greenColor, nowmagmaColor, 5f, _renderer);
 			nowmagmaColor = greenColor;
 		}else{

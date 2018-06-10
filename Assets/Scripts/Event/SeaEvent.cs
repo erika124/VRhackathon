@@ -6,7 +6,7 @@ public class SeaEvent : EventBaseObject
 {
 	//public Material material;
 	//public GameObject camera;
-	public GameObject bubble;
+	public GameObject bubbles;
 	public int b_turn = 5;
 	public float interval = 2.0f;
 	public Color seaColor;
@@ -14,8 +14,9 @@ public class SeaEvent : EventBaseObject
 	private Color nowseaColor; 
 	private Status status;
 	private Renderer _renderer;
-	private int sea_height = 8;
-	private int sea_width = 8;
+	private int sea_height = 100;
+	private int sea_width = 100;
+	
 	enum Status{
 		SEA,
 		COLA
@@ -27,6 +28,7 @@ public class SeaEvent : EventBaseObject
 		_renderer = this.GetComponent<Renderer>();
 		_renderer.material.color = seaColor;
 		nowseaColor = seaColor;
+		bubbles.SetActive(false);
 	}
 	
 	public override void DoEvent(GameObject HitObject)
@@ -42,6 +44,7 @@ public class SeaEvent : EventBaseObject
 			Destroy(HitObject,0.5f);
 			//イベントスタート
 			StartCoroutine(GenerateBubble());
+			
 		}
 		else if(HitObject.gameObject.tag == "Clean"){
 			Destroy(HitObject,0.5f);
@@ -72,27 +75,9 @@ public class SeaEvent : EventBaseObject
 	{
 		//カメラが揺れる
 		//iTween.ShakePosition(camera.gameObject,iTween.Hash("x",0.3f,"y",0.3f,"time",10f));
+		yield return new WaitForSeconds(2f);
+		bubbles.SetActive(true);
+		//yield return 0;
 		
-		for(int k = 0; k<b_turn; k++){
-			for(int i = 0; i<sea_width; i++){
-				for(int j = 0; j<sea_height; j++){
-					if(k%2 == 0){
-						if(i%2==0 && j%2==0){
-							GameObject b_obj = Instantiate(bubble);
-							b_obj.gameObject.transform.position = new Vector3(j-sea_height/2+1,this.gameObject.transform.position.y,i-sea_height/2+1);
-							Destroy(b_obj,1.0f);
-						}
-					}else{
-						if(i%2==1 && j%2==1){
-							GameObject b_obj = Instantiate(bubble);
-							b_obj.gameObject.transform.position = new Vector3(j-sea_height/2+1,this.gameObject.transform.position.y,i-sea_height/2+1);
-							Destroy(b_obj,1.0f);
-						}
-					}
-				}
-			}
-			yield return new WaitForSeconds(interval);
-		}	
-		yield return 0;
 	}
 }
