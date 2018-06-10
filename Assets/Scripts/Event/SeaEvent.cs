@@ -5,7 +5,7 @@ using UnityEngine;
 public class SeaEvent : EventBaseObject
 {
 	//public Material material;
-	public GameObject camera;
+	//public GameObject camera;
 	public GameObject bubble;
 	public int b_turn = 5;
 	public float interval = 2.0f;
@@ -50,7 +50,9 @@ public class SeaEvent : EventBaseObject
 		}
 		else{
 			//何も起こらない　キャラのセリフ誘発？
+			if(HitObject.gameObject.tag != "Untagged"){
 			Destroy(HitObject,2);
+			}
 		}
 	}
 
@@ -69,7 +71,7 @@ public class SeaEvent : EventBaseObject
 	private IEnumerator GenerateBubble()
 	{
 		//カメラが揺れる
-		iTween.ShakePosition(camera.gameObject,iTween.Hash("x",0.3f,"y",0.3f,"time",10f));
+		//iTween.ShakePosition(camera.gameObject,iTween.Hash("x",0.3f,"y",0.3f,"time",10f));
 		
 		for(int k = 0; k<b_turn; k++){
 			for(int i = 0; i<sea_width; i++){

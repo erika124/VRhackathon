@@ -27,7 +27,8 @@ public class EventBaseObject : MonoBehaviour
 }
 
 	public virtual　void ColorChange(Color toColor, Color changeColor, float duration, Renderer _renderer){
-			StartCoroutine(ChangeColor(toColor, changeColor, 10f, _renderer));
+			Debug.Log("base");
+			StartCoroutine(ChangeColor(toColor, changeColor, duration, _renderer));
 	}
 
 	public void OnCollisionEnter(Collision other)
