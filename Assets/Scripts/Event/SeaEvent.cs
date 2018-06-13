@@ -67,6 +67,7 @@ public class SeaEvent : EventBaseObject
 			Destroy(HitObject,0.5f);
 			status = Status.SEA;
 			Change(1);
+			bubbles.SetActive(false);
 			eventmanager.eventHappen.Value = "CLEAN";
 		}
 		else{

@@ -12,7 +12,7 @@ public class ItemModel : MonoBehaviour
 	[SerializeField]
 	private Text description;
 	[SerializeField]
-	private Sprite sprite;
+	//private Sprite sprite;
 
 	void Start()
 	{

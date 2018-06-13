@@ -6,7 +6,7 @@ namespace LowPolyAnimalPack
 {
   public class AudioManager : MonoBehaviour
   {
-    private static AudioManager instance;
+   /* private static AudioManager instance;
     [SerializeField]
     private bool muteSound;
 
@@ -92,6 +92,6 @@ namespace LowPolyAnimalPack
     {
       yield return new WaitForSeconds(delay);
       obj.SetActive(false);
-    }
+    }*/
   }
 }

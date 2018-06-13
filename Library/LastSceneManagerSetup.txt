@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/YutoScene.unity
+- path: Assets/Scenes/Honban.unity
   isLoaded: 1
   isActive: 1

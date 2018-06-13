@@ -38,9 +38,9 @@ GameObject:
   - component: {fileID: 4022319212213612}
   - component: {fileID: 33789854983486654}
   - component: {fileID: 23434749179303020}
-  - component: {fileID: 65306746644670228}
   - component: {fileID: 54253602947505770}
   - component: {fileID: 114390200761622656}
+  - component: {fileID: 65888316853452266}
   m_Layer: 0
   m_Name: Fryingpan
   m_TagString: Fryingpan
@@ -55,8 +55,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1775619057054570}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.6, y: 46.3, z: 73.8}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalPosition: {x: 9.299612, y: 57.508743, z: 40.617195}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 4795131640583650}
   m_Father: {fileID: 0}
@@ -173,20 +173,20 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!65 &65306746644670228
+  m_Constraints: 112
+  m_CollisionDetection: 2
+--- !u!65 &65888316853452266
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1775619057054570}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 8eca6fcc0e05d474fa78ae19c77812d2, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.52, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.06, z: -0.19}
+  m_Size: {x: 0.66, y: 0.27, z: 1}
+  m_Center: {x: -0.03, y: 0.09, z: -0.21}
 --- !u!114 &114390200761622656
 MonoBehaviour:
   m_ObjectHideFlags: 1

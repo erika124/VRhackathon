@@ -3,7 +3,7 @@
 namespace LowPolyAnimalPack
 {
   public class PlaySound : MonoBehaviour
-  {
+  {/* 
     [SerializeField]
     private AudioClip animalSound;
     [SerializeField]
@@ -73,6 +73,6 @@ namespace LowPolyAnimalPack
       {
         AudioManager.PlaySound(sleeping, transform.position);
       }
-    }
+    }*/
   }
 }

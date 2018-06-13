@@ -65,6 +65,8 @@ public class LaserPointer : MonoBehaviour {
 		}
 
 		var pointer = Pointer; // コントローラーを取得
+		Vector3 forward_v = pointer.transform.forward;
+		Vector3 normalize_v = forward_v.normalized;
 		// コントローラーがない or LineRendererがなければ何もしない
 		if (pointer == null || _LaserPointerRenderer == null) {
 			return;
@@ -89,7 +91,7 @@ public class LaserPointer : MonoBehaviour {
 				{
 					if(hitInfo.collider.tag != "Untagged")
 					{
-						hitInfo.transform.position = pointer.position + pointer.forward;
+						hitInfo.transform.position = pointer.position + normalize_v*25;
 						target_obj = hitInfo.collider.gameObject;
 						if(hold_flag) hold_flag = false;
 						else hold_flag = true;
@@ -102,7 +104,7 @@ public class LaserPointer : MonoBehaviour {
 		}
 
 		if(hold_flag){
-			target_obj.transform.position = pointer.position + pointer.forward ;
+			target_obj.transform.position = pointer.position + normalize_v*25;
 		}
 	}
 }

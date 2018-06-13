@@ -70,8 +70,9 @@ GameObject:
   - component: {fileID: 4216016061227948}
   - component: {fileID: 33329112743345172}
   - component: {fileID: 23651863312260500}
-  - component: {fileID: 65729597575847436}
   - component: {fileID: 54979557107136988}
+  - component: {fileID: 114592869714402074}
+  - component: {fileID: 65005330085552350}
   m_Layer: 0
   m_Name: Corn
   m_TagString: Corn
@@ -134,7 +135,7 @@ Transform:
   m_GameObject: {fileID: 1643674201880802}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 4218711415474482}
   m_Father: {fileID: 0}
@@ -413,23 +414,34 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1643674201880802}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 100
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!65 &65729597575847436
+  m_Constraints: 112
+  m_CollisionDetection: 2
+--- !u!65 &65005330085552350
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1643674201880802}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 8eca6fcc0e05d474fa78ae19c77812d2, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.47, y: 1, z: 0.46}
+  m_Size: {x: 0.4, y: 0.85, z: 0.28}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114592869714402074
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1643674201880802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d439b51de24d44bf78f16d2cf51f9b92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -180,6 +180,14 @@ namespace LowPolyAnimalPack
             }
         }
 
+        public void AnimalSound(){
+
+        }
+
+        public void Eating(){
+            
+        }
+
         private void Awake()
         {
             if (idleStates.Length == 0 && movementStates.Length == 0)

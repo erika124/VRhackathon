@@ -19,7 +19,8 @@ public class MountainEvent : EventBaseObject
 		
 	enum Status{
 		MOUNTAIN,
-		FRYINGPAN
+		FRYINGPAN,
+		COIN
 	}
 	void Start()
 	{	
@@ -32,11 +33,13 @@ public class MountainEvent : EventBaseObject
 	
 	public override void DoEvent(GameObject HitObject)
 	{
+		Debug.Log("status"+status);
 		HitObject.gameObject.transform.position = this.gameObject.transform.position;
 		if(HitObject.gameObject.tag == "Coin" && status == Status.MOUNTAIN){
 			//coinイベント開始	
 			Coin(0);
 			sound.PlayOneShot(coindrop);
+			status = Status.COIN;
 			eventmanager.eventHappen.Value = "COM";
 		}
 		else if(HitObject.gameObject.tag == "Fryingpan" && status == Status.MOUNTAIN)

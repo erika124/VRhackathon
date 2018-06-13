@@ -36,8 +36,9 @@ GameObject:
   - component: {fileID: 4652092471312540}
   - component: {fileID: 33037365762769704}
   - component: {fileID: 23429445413588416}
-  - component: {fileID: 65016564294811400}
   - component: {fileID: 54753479759114706}
+  - component: {fileID: 114091212400369592}
+  - component: {fileID: 65374819784959896}
   m_Layer: 0
   m_Name: MentosONE
   m_TagString: Mentos
@@ -185,8 +186,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1365983634970826}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -40.95542, y: 67.80854, z: -19.38944}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 4326075839021316}
   m_Father: {fileID: 0}
@@ -317,8 +318,8 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!65 &65016564294811400
+  m_CollisionDetection: 2
+--- !u!65 &65374819784959896
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -328,5 +329,16 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.22, y: 0.1, z: 0.23}
+  m_Size: {x: 0.22, y: 0.1, z: 0.22}
   m_Center: {x: 0, y: 0.21, z: 0}
+--- !u!114 &114091212400369592
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1365983634970826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d439b51de24d44bf78f16d2cf51f9b92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
